@@ -17,7 +17,7 @@ class WhcSpider(CrawlSpider):
         'DEPTH_LIMIT': 10,
         # 'AUTOTHROTTLE_ENABLED': True,
         'DOWNLOADER_MIDDLEWARES': {
-            'Khala.middlewares.proxiesmiddleware.ProxiesMiddleware': 543
+            'Khala.middlewares.v2raynmiddleware.V2rayNMiddleware': 543
         },
         'ITEM_PIPELINES': {
             'Khala.piplines.warcpiplines.WarcWriterPipeline': 300,
