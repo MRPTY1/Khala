@@ -15,7 +15,7 @@ class WhcSpider(CrawlSpider):
     custom_settings = {
         # 爬取深度
         'DEPTH_LIMIT': 10,
-        'AUTOTHROTTLE_ENABLED': True,
+        # 'AUTOTHROTTLE_ENABLED': True,
         'DOWNLOADER_MIDDLEWARES': {
             'Khala.middlewares.proxiesmiddleware.ProxiesMiddleware': 543
         },
