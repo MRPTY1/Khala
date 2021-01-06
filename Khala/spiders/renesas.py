@@ -13,8 +13,9 @@ class RenesasSpider(CrawlSpider):
         Rule(LinkExtractor(), callback='parse_item', follow=True),
     )
     custom_settings = {
+        # 日志输出目录
+        # 'LOG_FILE': f'D:/ScrapyLog/{name}_log.txt',
         # 爬取深度
-        'LOG_FILE': f'D:/ScrapyLog/{name}_log.txt',
         'DEPTH_LIMIT': 10,
         'CONCURRENT_REQUESTS': 32,
         'DOWNLOADER_MIDDLEWARES': {
@@ -30,7 +31,7 @@ class RenesasSpider(CrawlSpider):
         item['url'] = response.url
         item['headers'] = self.convert(response.headers)
         item['content'] = response.body
-        # yield item
+        return item
 
     def convert(self, data):
         if isinstance(data, bytes):

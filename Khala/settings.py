@@ -8,7 +8,7 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'Khala'
-
+LOG_LEVEL = 'INFO'
 SPIDER_MODULES = ['Khala.spiders']
 NEWSPIDER_MODULE = 'Khala.spiders'
 
