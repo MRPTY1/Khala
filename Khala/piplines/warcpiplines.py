@@ -21,4 +21,4 @@ class WarcWriterPipeline:
                                            http_headers=http_headers)
 
         writer.write_record(record)
-        return item
+        # return item
