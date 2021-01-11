@@ -22,7 +22,7 @@ class RenesasSpider(CrawlSpider):
             'Khala.middlewares.proxiesmiddleware.ProxiesMiddleware': 543
         },
         'ITEM_PIPELINES': {
-            'Khala.piplines.warcpiplines.WarcWriterPipeline': 300,
+            'Khala.pipelines.warcpipelines.WarcWriterPipeline': 300,
         }
     }
 

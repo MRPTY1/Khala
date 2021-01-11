@@ -20,7 +20,7 @@ class WhcSpider(CrawlSpider):
             'Khala.middlewares.v2raynmiddleware.V2rayNMiddleware': 543
         },
         'ITEM_PIPELINES': {
-            'Khala.piplines.warcpiplines.WarcWriterPipeline': 300,
+            'Khala.pipelines.warcpipelines.WarcWriterPipeline': 300,
         }
     }
 
