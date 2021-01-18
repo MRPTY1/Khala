@@ -20,7 +20,7 @@ class LenovoSpider(scrapy.Spider):
 
     def parse(self, response: HtmlResponse, **kwargs):
         url = 'https://pcsupport.lenovo.com/us/zh/products/'
-        with open('Khala/lenovo/lenovo.txt', 'r+') as model_list:
+        with open('Khala/spider_params/lenovo/lenovo.txt', 'r+') as model_list:
             for model in model_list:
                 model = model.replace('\n', '')
                 yield response.follow(url=url + model, callback=self.follow_index, meta={'model': model})
@@ -47,7 +47,7 @@ class LenovoSpider(scrapy.Spider):
     def get_contents_list(self, response: HtmlResponse):
         meat = response.meta
         contents_list = response.json().get('list')
-        with open('Khala/lenovo/language.txt', 'r+') as languages:
+        with open('Khala/spider_params/lenovo/language.txt', 'r+') as languages:
             for language in languages:
                 language = language.replace('\n', '')
                 for contents in contents_list:

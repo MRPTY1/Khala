@@ -37,8 +37,9 @@ ROBOTSTXT_OBEY = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'en',
+    'Accept': 'application/json, text/html, */*',
+    'accept-encoding': 'gzip, deflate, br',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6,ja;q=0.5',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/87.0.4280.88 Safari/537.36 '
 }
